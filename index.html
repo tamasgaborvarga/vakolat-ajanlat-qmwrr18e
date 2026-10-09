@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Paletta Vakolatcentrum — Weboldal-ajánlat</title>
+<meta name="description" content="A Paletta Vakolatcentrum (M&amp;M Tiszafüred Kft.) új weboldala: kiindulópont, arculat, élő bemutató, összehasonlítás és tételes árajánlat.">
+<meta property="og:title" content="Paletta Vakolatcentrum — Ugyanaz a telep, új kirakat">
+<meta property="og:description" content="Weboldal-ajánlat az M&amp;M Tiszafüred Kft. részére.">
+<meta property="og:image" content="https://vakolat-ajanlat-qmwrr18e.pages.dev/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff;--alt:#f5f3ef;--alt2:#ebe7e0;--card:#fff;--line:#e2e0db;--line2:#cbc8c1;
+  --ink:#151515;--ink2:#45433f;--muted:#5f5c57;
+  --night:#161615;--night2:#242422;--line-d:#37362f;--on:#f2f1ee;--on-m:#b5b2ac;
+  --red:#d62329;--red-h:#b01b20;--red-d:#f0484d;
+  --f:"Archivo","Segoe UI",system-ui,sans-serif;
+  --g:clamp(1rem,4vw,3rem);--max:78rem;--ease:cubic-bezier(.16,.84,.3,1);--r:6px;--r-lg:12px;
+  --sh:0 2px 4px rgb(40 30 20 / .06),0 30px 60px -30px rgb(40 30 20 / .4);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-synthesis:none}
+body{background:var(--night);color:var(--on);font:400 1.0625rem/1.6 var(--f);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+em,i{font-style:normal}
+::selection{background:var(--red);color:#fff}
+:focus-visible{outline:3px solid var(--red-d);outline-offset:3px}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--g)}
+.sec{padding-block:clamp(5rem,12vw,9rem);position:relative}
+.light{background:var(--alt);color:var(--ink);color-scheme:light}
+.light.white{background:var(--bg)}
+.light :focus-visible{outline-color:var(--red)}
+.lbl{font-weight:700;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase}
+.kick{display:flex;align-items:center;gap:.7rem;color:var(--on-m)}
+.light .kick{color:var(--ink2)}
+.kick b{font-weight:800;color:var(--on)}
+.light .kick b{color:var(--ink)}
+.kick .dot{width:.55rem;height:.55rem;background:var(--red);flex:none}
+h1,h2,h3{font-weight:720;line-height:1.04;letter-spacing:-.032em;text-wrap:balance;overflow-wrap:anywhere}
+h2{font-size:clamp(2rem,1.3rem + 3.2vw,4rem);margin-top:1.1rem}
+h3{font-size:clamp(1.15rem,1rem + .5vw,1.4rem);line-height:1.15;letter-spacing:-.018em;font-weight:700}
+.lead{font-size:clamp(1.1rem,1rem + .45vw,1.35rem);line-height:1.5;color:var(--on-m);max-width:44rem;margin-top:1.4rem;text-wrap:pretty}
+.light .lead{color:var(--muted)}
+.hl{color:var(--red-d)}.light .hl{color:var(--red)}
+p{text-wrap:pretty}
+.note{margin-top:1rem;font-size:.85rem;color:var(--on-m)}
+.light .note{color:var(--muted)}
+
+/* fejléc + haladásjelző */
+.top{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem var(--g);background:rgb(22 22 21 / .94);border-bottom:1px solid var(--line-d);transform:translateY(-100%);transition:transform .5s var(--ease)}
+.top.on{transform:none}
+.brand{display:flex;align-items:center;gap:.7rem}
+.brand img{width:2.1rem;height:auto;background:#fff;border-radius:3px;padding:2px}
+.brand b{font-weight:760;font-size:1rem;letter-spacing:-.01em}
+.top .lbl{color:var(--on-m);font-size:.7rem}
+@media(max-width:560px){.top .lbl{display:none}}
+.bar{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(var(--p,0));background:var(--red);z-index:60}
+
+/* nyitókép: raklapra rakott téglasor, soronként érkezik */
+.cover{min-height:100svh;display:grid;place-items:center;text-align:center;padding:6rem var(--g) 8rem;position:relative;overflow:hidden;isolation:isolate}
+.cover .grid{position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgb(242 241 238 / .045) 1px,transparent 1px),linear-gradient(90deg,rgb(242 241 238 / .045) 1px,transparent 1px);background-size:32px 32px;background-position:center;-webkit-mask:radial-gradient(closest-side,#000 25%,transparent);mask:radial-gradient(closest-side,#000 25%,transparent)}
+.cover .eyebrow{color:var(--on-m);justify-content:center}
+.stack{width:clamp(8rem,20vw,11.5rem);margin:0 auto 2.6rem;overflow:visible}
+.stack .b{transform-box:fill-box;opacity:0;animation:drop .5s cubic-bezier(.5,0,1,.5) forwards}
+.stack .pal{opacity:0;animation:fade .4s .1s forwards}
+@keyframes drop{from{opacity:1;transform:translateY(-260%)}to{opacity:1;transform:none}}
+.cover .eyebrow{opacity:0;animation:up 1s var(--ease) 1.5s forwards}
+.cover h1{font-size:clamp(2.6rem,1.3rem + 5.4vw,6rem);margin-top:1.8rem;opacity:0;animation:up 1s var(--ease) 1.6s forwards}
+.cover .sub{opacity:0;animation:up 1s var(--ease) 1.75s forwards;margin-inline:auto}
+.cover .meta{margin-top:2.2rem;color:var(--on-m);opacity:0;animation:up 1s var(--ease) 1.9s forwards;justify-content:center}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes fade{to{opacity:1}}
+.cue{position:absolute;bottom:1.6rem;left:50%;translate:-50% 0;color:var(--on-m);display:flex;flex-direction:column;align-items:center;gap:.6rem;opacity:0;animation:fade 1s 2.4s forwards}
+.cue i{display:block;width:1px;height:2.6rem;background:linear-gradient(var(--red-d),transparent);animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* görgetésre megjelenés */
+.js [data-r]{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease);transition-delay:var(--d,0ms)}
+.js [data-r].in{opacity:1;transform:none}
+
+/* kiindulópont */
+.facts{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:3.5rem}
+@media(min-width:760px){.facts{grid-template-columns:repeat(4,1fr)}}
+.fact{background:var(--alt);padding:1.6rem 1.4rem}
+.fact strong{display:block;font-weight:760;font-size:clamp(2rem,1.4rem + 2vw,2.8rem);line-height:1;letter-spacing:-.03em}
+.fact span{display:block;margin-top:.6rem;color:var(--muted);font-size:.95rem}
+.oldshots{display:grid;gap:2.5rem;margin-top:3.5rem;align-items:end}
+@media(min-width:900px){.oldshots{grid-template-columns:3fr 1fr}}
+figure figcaption{margin-top:.75rem;font-size:.85rem;color:var(--muted)}
+.dark figure figcaption{color:var(--on-m)}
+.frame{border-radius:8px;overflow:hidden;box-shadow:var(--sh),0 0 0 1px rgb(21 21 21 / .1);background:#fff}
+.frame .chrome{display:flex;gap:6px;align-items:center;padding:.55rem .8rem;background:#e9e6e0;border-bottom:1px solid #d6d2ca}
+.frame .chrome span{width:9px;height:9px;border-radius:50%;background:#c9c4bb}
+.frame .chrome em{margin-left:.8rem;font-weight:600;font-size:.72rem;color:#6f6b64}
+.frame>img{width:100%;height:auto}
+
+/* arculat */
+.ba{display:grid;gap:1.5rem;margin-top:3.5rem}
+@media(min-width:900px){.ba{grid-template-columns:1fr 1fr}}
+.ba .tag{display:inline-block;margin-bottom:.8rem;color:var(--on-m)}
+.ba .tag.new{color:var(--red-d)}
+.brandrow{display:grid;gap:3rem;align-items:center;margin-top:4.5rem}
+@media(min-width:900px){.brandrow{grid-template-columns:1fr 1.15fr}}
+.stage{background:#fff;border-radius:var(--r-lg);padding:clamp(2rem,5vw,3.5rem);display:grid;place-items:center;gap:1.4rem;color:var(--ink)}
+.stage img{width:min(11rem,60%)}
+.stage .lock{display:flex;align-items:center;gap:.9rem}
+.stage .lock img{width:3.2rem}
+.stage .lock b{display:block;font-weight:760;font-size:1.35rem;letter-spacing:-.02em;line-height:1.1}
+.stage .lock small{color:var(--muted);font-size:.85rem}
+.principles{list-style:none;padding:0;margin-top:1.6rem;display:grid;gap:1rem}
+.principles li{display:grid;grid-template-columns:1.2rem 1fr;gap:.8rem;color:var(--on-m)}
+.principles li::before{content:"";width:.55rem;height:.55rem;background:var(--red);margin-top:.55rem}
+.principles strong{color:var(--on);font-weight:700}
+.swatches{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:3.5rem;background:var(--line-d);border:1px solid var(--line-d);border-radius:var(--r-lg);overflow:hidden}
+@media(min-width:760px){.swatches{grid-template-columns:repeat(4,1fr)}}
+.swatch{min-height:10rem;padding:1.2rem;display:flex;flex-direction:column;justify-content:space-between}
+.swatch b{font-weight:760;font-size:1.15rem}
+.swatch .lbl{font-size:.64rem;opacity:.9}
+.type{display:grid;gap:1.25rem;margin-top:1.25rem}
+@media(min-width:900px){.type{grid-template-columns:1.4fr 1fr}}
+.tcard{border:1px solid var(--line-d);border-radius:var(--r-lg);padding:1.6rem;background:var(--night2)}
+.tcard .aa{font-size:clamp(3.6rem,3rem + 3vw,6rem);line-height:1;margin:.5rem 0 .9rem;letter-spacing:-.04em}
+.tcard p{color:var(--on-m);font-size:.95rem}
+.tcard .lbl{color:var(--on-m);font-size:.68rem}
+.weights{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;margin:.6rem 0 1rem;font-size:1.6rem;letter-spacing:-.02em}
+.icons{display:flex;gap:.5rem;margin:.8rem 0 1rem}
+.icons span{width:2.9rem;aspect-ratio:1;display:grid;place-items:center;border-radius:var(--r);background:#2e2e2b}
+.icons svg{width:56%;height:56%;color:var(--on)}
+
+/* eszközkeretek: MacBook és iPhone tisztán CSS-ből, cqw-ben méretezve (az ALCUFER-/Józsa-ajánlatból) */
+.mac{container-type:inline-size;width:100%;margin-inline:auto}
+.mac .lid{position:relative;margin-inline:6.2cqw;background:#0b0b0d;border-radius:2.6cqw 2.6cqw .7cqw .7cqw;padding:1.9cqw 1.9cqw 2.3cqw;
+  box-shadow:inset 0 0 0 .14cqw #26272b,0 0 0 .16cqw #8f939a,0 0 0 .34cqw #d5d8dd,0 0 0 .44cqw #a2a6ad,0 4cqw 6cqw -2cqw rgb(0 0 0 / .35)}
+.mac .lid::before{content:"";position:absolute;top:1.9cqw;left:50%;translate:-50% 0;width:8.2cqw;height:1.65cqw;background:#0b0b0d;border-radius:0 0 .8cqw .8cqw;z-index:6}
+.mac .lid::after{content:"";position:absolute;top:2.35cqw;left:50%;translate:-50% 0;width:.62cqw;height:.62cqw;border-radius:50%;background:radial-gradient(circle at 40% 40%,#4b5d73 0 25%,#1a1d22 45%,#0b0b0d 70%);z-index:7}
+.mac .scr{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:.45cqw;background:#fff}
+.mac .base{position:relative;height:2.6cqw;border-radius:.35cqw .35cqw 2.2cqw 2.2cqw / .35cqw .35cqw 1.9cqw 1.9cqw;
+  background:linear-gradient(180deg,#f3f4f6 0%,#dcdfe3 22%,#b9bdc3 58%,#868a91 92%,#6f737a 100%)}
+.mac .base::before{content:"";position:absolute;top:0;left:50%;translate:-50% 0;width:14cqw;height:1cqw;border-radius:0 0 1.1cqw 1.1cqw;background:linear-gradient(180deg,#a9adb3,#d3d6da)}
+.mac .base::after{content:"";position:absolute;inset:0 6.2cqw auto;height:.3cqw;background:linear-gradient(90deg,#5c6067,#9a9ea5 50%,#5c6067);border-radius:0 0 .2cqw .2cqw}
+.iph{container-type:inline-size;position:relative;width:100%;max-width:300px;margin-inline:auto}
+.iph .body{position:relative;border-radius:16.5cqw;padding:3.6cqw;background:#0e0e10;
+  box-shadow:inset 0 0 0 .7cqw #1d1e21,inset 0 0 0 1.1cqw #000,0 0 0 .45cqw #55585e,0 0 0 1.05cqw #b3b6bc,0 0 0 1.45cqw #6e7177,0 11cqw 14cqw -6cqw rgb(0 0 0 / .42)}
+.iph .scr{position:relative;aspect-ratio:390/844;border-radius:13cqw;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.iph .island{position:absolute;top:3.1cqw;left:50%;translate:-50% 0;width:30cqw;height:8.6cqw;border-radius:5cqw;background:#000;z-index:5}
+.iph .sb{flex:none;height:14cqw;display:flex;align-items:center;justify-content:space-between;padding:1.6cqw 8cqw 0 10.5cqw;background:#161615;color:#f2f1ee;
+  font:600 4.3cqw/1 -apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;letter-spacing:-.01em}
+.iph .sb .ic{display:flex;align-items:center;gap:1.6cqw}
+.iph .sig{display:block;width:5.4cqw;height:3.4cqw;background:
+  linear-gradient(currentColor,currentColor) 0 100%/1cqw 35% no-repeat,linear-gradient(currentColor,currentColor) 1.45cqw 100%/1cqw 55% no-repeat,
+  linear-gradient(currentColor,currentColor) 2.9cqw 100%/1cqw 78% no-repeat,linear-gradient(currentColor,currentColor) 4.35cqw 100%/1cqw 100% no-repeat}
+.iph .bat{display:block;position:relative;width:7cqw;height:3.4cqw;border-radius:1cqw;border:.35cqw solid color-mix(in srgb,currentColor 45%,transparent);padding:.35cqw}
+.iph .bat::before{content:"";display:block;height:100%;width:78%;background:currentColor;border-radius:.45cqw}
+.iph .bat::after{content:"";position:absolute;right:-1.1cqw;top:50%;translate:0 -50%;width:.6cqw;height:1.3cqw;border-radius:0 .4cqw .4cqw 0;background:color-mix(in srgb,currentColor 45%,transparent)}
+.iph .view{flex:1;position:relative;overflow:hidden;background:#fff}
+.iph .view>img{width:100%;height:auto;display:block}
+.iph .hw{position:absolute;width:1.3cqw;border-radius:.7cqw;background:linear-gradient(90deg,#4f5257,#b8bbc1 60%,#7d8086);z-index:-1}
+.iph .hw.a{left:-1.9cqw;top:17%;height:5%}.iph .hw.v1{left:-1.9cqw;top:25%;height:9%}.iph .hw.v2{left:-1.9cqw;top:36%;height:9%}
+.iph .hw.p{right:-1.9cqw;top:28%;height:13%;background:linear-gradient(270deg,#4f5257,#b8bbc1 60%,#7d8086)}
+
+/* élő bemutató a keretekben: az iframe a valódi nézetméreten fut (1440 / 390 px), lekicsinyítve */
+.live-frame{position:absolute;inset:0;overflow:hidden;background:var(--alt);contain:strict;isolation:isolate}
+.live-frame iframe{position:absolute;left:0;top:0;border:0;transform-origin:0 0;background:#fff;will-change:transform}
+.mac .scr .live-frame{border-radius:inherit}
+.web-duo{display:grid;gap:3rem;margin-top:3.5rem;align-items:end}
+@media(min-width:960px){.web-duo{grid-template-columns:2.6fr 1fr}}
+.web-duo figcaption{margin-top:1.2rem}
+
+/* funkciók */
+.feats{display:grid;gap:1.25rem;margin-top:3.5rem}
+@media(min-width:900px){.feats{grid-template-columns:repeat(2,1fr)}}
+.feat{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column}
+.feat .img{aspect-ratio:16/9;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}
+.feat .img img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform 1.2s var(--ease)}
+.feat:hover .img img{transform:scale(1.02)}
+.feat .img.mid img{object-position:center}
+.feat .txt{padding:1.5rem 1.5rem 1.7rem}
+.feat .txt p{color:var(--muted);margin-top:.55rem;font-size:.98rem}
+.feat .num{color:var(--red);font-size:.7rem}
+.feat .img.split{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+
+/* összehasonlítás */
+.cmp{width:100%;border-collapse:collapse;margin-top:3.5rem;font-size:1rem}
+.cmp th,.cmp td{padding:1.05rem .9rem;text-align:left;border-bottom:1px solid var(--line-d);vertical-align:top}
+.cmp thead th{font-weight:700;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--on-m);border-bottom:2px solid var(--on)}
+.cmp td:first-child{font-weight:700;width:24%}
+.cmp td.old{color:var(--on-m)}
+.cmp td.new::before{content:"";display:inline-block;width:.5rem;height:.5rem;background:var(--red);margin-right:.6rem;vertical-align:.08em}
+@media(max-width:700px){.cmp thead{display:none}.cmp tr{display:grid;padding:1rem 0;border-bottom:1px solid var(--line-d)}.cmp td{border:0;padding:.2rem 0;width:auto!important}.cmp td.old::before{content:"Ma: ";color:var(--on-m)}}
+
+/* előnyök */
+.gains{display:grid;gap:1px;background:var(--line);border-block:1px solid var(--line);margin-top:3.5rem}
+@media(min-width:760px){.gains{grid-template-columns:repeat(3,1fr)}}
+.gain{background:var(--bg);padding:2rem 1.6rem 2.2rem}
+.gain .n{color:var(--red);font-weight:760;font-size:.8rem;letter-spacing:.12em}
+.gain h3{margin-top:.8rem}
+.gain p{margin-top:.7rem;color:var(--muted);font-size:.98rem}
+
+/* gombok */
+.btn{display:inline-flex;align-items:center;gap:.6rem;min-height:3.2rem;padding:.85rem 1.4rem;border-radius:var(--r);font-weight:700;font-size:1rem;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn.p{background:var(--red);color:#fff;border:2px solid var(--red)}.btn.p:hover{background:var(--red-h);border-color:var(--red-h)}
+.btn.s{border:2px solid rgb(242 241 238 / .55);color:var(--on)}.btn.s:hover{background:var(--on);color:var(--ink)}
+
+/* menetrend */
+.steps{list-style:none;padding:0;margin-top:3.5rem;display:grid;gap:1px;background:var(--line-d);border-block:1px solid var(--line-d)}
+@media(min-width:900px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps>li{background:var(--night);padding:2rem 1.4rem}
+.steps .w{color:var(--red-d);font-size:.72rem}
+.steps h3{margin-top:.9rem}
+.steps p{margin-top:.6rem;color:var(--on-m);font-size:.96rem}
+.steps ul{margin-top:.7rem;padding:0;list-style:none;color:var(--on-m);font-size:.94rem;display:grid;gap:.3rem}
+.steps ul li{display:grid;grid-template-columns:.9rem 1fr;gap:.5rem}
+.steps ul li::before{content:"";width:.4rem;height:.4rem;background:var(--red);margin-top:.55rem}
+
+/* árajánlat */
+.quote{margin-top:3.5rem;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 40px 80px -40px rgb(40 30 20 / .35)}
+.quote header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding:1.8rem clamp(1.2rem,3vw,2.4rem);border-bottom:2px solid var(--ink)}
+.quote header b{font-weight:760;font-size:1.25rem;letter-spacing:-.015em}
+.quote header span{color:var(--muted);font-size:.92rem}
+.qt{width:100%;border-collapse:collapse}
+.qt th,.qt td{padding:.95rem clamp(1.2rem,3vw,2.4rem);border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.qt thead th{font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--alt)}
+.qt .r{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.qt tr.grp td{background:var(--alt);font-weight:760;font-size:.95rem}
+.qt td small{display:block;color:var(--muted);font-size:.88rem;margin-top:.25rem;line-height:1.45}
+.qt tr.sub td{font-weight:700;border-bottom:2px solid var(--line)}
+.qt tr.total td{font-weight:780;font-size:1.3rem;letter-spacing:-.015em;border-bottom:0;background:var(--night);color:var(--on)}
+.qt tr.total td.r{color:#fff;font-size:1.55rem}
+@media(max-width:640px){
+  .qt,.qt tbody{display:block}.qt thead{display:none}
+  .qt tr{display:grid;grid-template-columns:1fr auto;column-gap:1rem;align-items:start;border-bottom:1px solid var(--line)}
+  .qt td{border:0;padding:.85rem 1rem}.qt .hrs{display:none}.qt tr.grp td{grid-column:1/-1}
+  .qt tr.sub{border-bottom-width:2px}.qt tr.total{background:var(--night)}
+  .qt tr.total td{font-size:1.05rem}.qt tr.total td.r{font-size:1.15rem;white-space:normal;text-align:right}
+}
+.opts{display:grid;gap:1px;background:var(--line);border-top:1px solid var(--line)}
+@media(min-width:760px){.opts{grid-template-columns:repeat(2,1fr)}.opts .opt:last-child:nth-child(odd){grid-column:1/-1}}
+.opt{background:var(--card);padding:1.4rem clamp(1.2rem,3vw,2.4rem)}
+.opt b{display:flex;justify-content:space-between;gap:1rem;font-weight:700}
+.opt b span{white-space:nowrap;color:var(--red);font-variant-numeric:tabular-nums}
+.opt p{color:var(--muted);font-size:.92rem;margin-top:.35rem}
+.terms{padding:1.4rem clamp(1.2rem,3vw,2.4rem);background:var(--alt);font-size:.9rem;color:var(--muted);display:grid;gap:.4rem}
+.terms strong{color:var(--ink)}
+
+/* zárás */
+.close{text-align:center}
+.close h2{font-size:clamp(2.2rem,1.3rem + 4.4vw,5rem)}
+.close .stack{width:clamp(5rem,11vw,7rem);margin:0 auto 2.2rem}
+.late .b,.late .pal{animation-play-state:paused}
+.late.in .b,.late.in .pal{animation-play-state:running}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:2.6rem}
+.sign{margin-top:4rem;color:var(--on-m);font-size:.95rem}
+.sign b{display:block;color:var(--on);font-weight:760;font-size:1.3rem;margin-bottom:.3rem}
+footer.f{padding:2rem var(--g);border-top:1px solid var(--line-d);color:var(--on-m);font-size:.82rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js [data-r]{transform:none}
+}
+@media print{.top,.bar,.cue{display:none}.js [data-r]{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-haz" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/></g></symbol>
+  <symbol id="i-henger" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="15" height="6" rx="1.5"/><path d="M18 6.5h2.5v5H11v3"/><rect x="9.5" y="14.5" width="3" height="6.5" rx="1"/></g></symbol>
+  <symbol id="i-retegek" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 9 4.5-9 4.5-9-4.5Z"/><path d="m3 12 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></g></symbol>
+  <symbol id="i-fal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 9.3h18M3 14.7h18M9 4v5.3M15 4v5.3M12 9.3v5.4M6 14.7V20M18 14.7V20"/></g></symbol>
+</svg>
+<div class="bar" aria-hidden="true"></div>
+<header class="top" aria-label="Ajánlat">
+  <span class="brand"><img src="assets/mm-logo.png" alt="" width="180" height="150"><b>Paletta Vakolatcentrum</b></span>
+  <span class="lbl">Weboldal-ajánlat · 2026</span>
+</header>
+
+<main>
+<!-- 0 · NYITÓKÉP -->
+<section class="cover" aria-labelledby="cim">
+  <div class="grid" aria-hidden="true"></div>
+  <div>
+    <svg class="stack" viewBox="0 0 120 92" aria-hidden="true">
+      <rect class="pal" x="4" y="80" width="112" height="6" fill="#5f5c57"/><rect class="pal" x="10" y="86" width="10" height="5" fill="#5f5c57"/><rect class="pal" x="55" y="86" width="10" height="5" fill="#5f5c57"/><rect class="pal" x="100" y="86" width="10" height="5" fill="#5f5c57"/>
+      <g fill="#f2f1ee">
+        <rect class="b" x="8" y="64" width="34" height="14" rx="1.5" style="animation-delay:.25s"/><rect class="b" x="43" y="64" width="34" height="14" rx="1.5" style="animation-delay:.33s"/><rect class="b" x="78" y="64" width="34" height="14" rx="1.5" style="animation-delay:.41s"/>
+        <rect class="b" x="8" y="48" width="16.5" height="14" rx="1.5" style="animation-delay:.6s"/><rect class="b" x="25.5" y="48" width="34" height="14" rx="1.5" style="animation-delay:.68s"/><rect class="b" x="60.5" y="48" width="34" height="14" rx="1.5" style="animation-delay:.76s"/><rect class="b" x="95.5" y="48" width="16.5" height="14" rx="1.5" style="animation-delay:.84s"/>
+        <rect class="b" x="8" y="32" width="34" height="14" rx="1.5" style="animation-delay:1s"/><rect class="b" x="78" y="32" width="34" height="14" rx="1.5" style="animation-delay:1.16s"/>
+      </g>
+      <rect class="b" x="43" y="32" width="34" height="14" rx="1.5" fill="#d62329" style="animation-delay:1.08s"/>
+    </svg>
+    <p class="lbl kick eyebrow"><span class="dot"></span>Weboldal-ajánlat · M&amp;M Tiszafüred Kft.</p>
+    <h1 id="cim">Ugyanaz a telep,<br><span class="hl">új kirakat.</span></h1>
+    <p class="lead sub">A Paletta Vakolatcentrum új weboldala — hogy aki Tiszafüreden és környékén épít vagy felújít, telefonról is egy perc alatt megtalálja, amit keres, és egy koppintással felhívja a boltot.</p>
+    <p class="lbl kick meta">Készítette: Varga Tamás Gábor · 2026. október</p>
+  </div>
+  <div class="cue lbl" aria-hidden="true">Görgessen<i></i></div>
+</section>
+
+<!-- 1 · KIINDULÓPONT -->
+<section class="sec light" aria-labelledby="s1">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>01</b>A kiindulópont</p>
+    <h2 id="s1" data-r>A telep él,<br><span class="hl">a weboldal áll.</span></h2>
+    <p class="lead" data-r>A Facebook-oldalon 2026-ban is jönnek a hírek: szlovák építő fenyő érkezett, Leier kerítéskő, házhoz szállítás saját autókkal. A vakolat-centrum.hu ebből semmit nem mutat — és telefonon, ahol ma a legtöbben keresnek, alig használható.</p>
+
+    <div class="facts" data-r>
+      <div class="fact"><strong>0 / 7</strong><span>oldal készült telefonra — a mobil a kicsinyített asztali lapot mutatja</span></div>
+      <div class="fact"><strong>Képen</strong><span>van a telefonszám és az e-mail — nem hívható egy koppintással, a Google sem olvassa ki</span></div>
+      <div class="fact"><strong>34 / 37</strong><span>termék olyan néven szerepel (Acropol, Texturato), amelyet a gyártó 2022-ben megszüntetett</span></div>
+      <div class="fact"><strong>HTML 4.01</strong><span>az oldal szabványa (1999), Internet Explorer 8-at utánzó beállítással</span></div>
+    </div>
+
+    <div class="oldshots">
+      <figure data-r><div class="frame"><div class="chrome"><span></span><span></span><span></span><em>vakolat-centrum.hu</em></div><img src="assets/regi-1440.webp" alt="A mostani vakolat-centrum.hu nyitóoldala: téglamintás háttér, képként beillesztett feliratok és telefonszámok" width="1440" height="900" loading="lazy"></div><figcaption>Ma, asztali gépen · 1440 px</figcaption></figure>
+      <figure data-r style="--d:120ms"><div class="iph"><span class="hw a"></span><span class="hw v1"></span><span class="hw v2"></span><span class="hw p"></span><div class="body"><div class="scr"><span class="island"></span><div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><i class="bat"></i></span></div><div class="view"><img src="assets/regi-390.webp" alt="A mostani oldal telefonon: a teljes asztali lap lekicsinyítve, apró szöveggel" width="780" height="1688" loading="lazy"></div></div></div></div><figcaption>Ma, telefonon — nagyítani kell, hogy olvasható legyen</figcaption></figure>
+    </div>
+    <p class="note">Mérés: vakolat-centrum.hu (kezdőlap + 6 aloldal), 2026. október 9., Chrome, 1440 px-es és telefonos nézet. A termékadat-ellenőrzés: kingstone.hu → meton.hu, 2026. augusztus.</p>
+  </div>
+</section>
+
+<!-- 2 · ARCULAT -->
+<section class="sec dark" aria-labelledby="s2">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>02</b>Arculat</p>
+    <h2 id="s2" data-r>Az M&amp;M megjelenése,<br><span class="hl">rendbe téve.</span></h2>
+    <p class="lead" data-r>Nem találtam ki új márkát. Az oldal a cég mai, Facebookon is használt megjelenését követi: a fekete háromszög-logót és a pirosat. A különbség a fegyelem — egy betűcsalád, nyugodt felületek, és a színt a telep valódi fotói adják.</p>
+
+    <div class="ba">
+      <figure data-r><span class="lbl tag">Előtte · Kapcsolat</span><div class="frame"><div class="chrome"><span></span><span></span><span></span><em>vakolat-centrum.hu/kapcsolat.html</em></div><img src="assets/regi-kapcsolat.webp" alt="A régi kapcsolat-oldal: árnyékolt, színes, képként beillesztett feliratok" width="1440" height="900" loading="lazy"></div></figure>
+      <figure data-r style="--d:120ms"><span class="lbl tag new">Utána · Kapcsolat</span><div class="frame"><div class="chrome"><span></span><span></span><span></span><em>vakolat-centrum.hu/kapcsolat/</em></div><img src="assets/uj-kapcsolat.webp" alt="Az új kapcsolat-oldal: élő nyitvatartás-jelző, három hívható telefonszám, térkép" width="1440" height="900" loading="lazy"></div></figure>
+    </div>
+
+    <div class="brandrow">
+      <div class="stage" data-r>
+        <img src="assets/mm-logo.png" alt="Az M&amp;M Tiszafüred Kft. háromszög-logója" width="180" height="150">
+      </div>
+      <div data-r style="--d:120ms">
+        <h3>Négy szabály, amitől egységes</h3>
+        <ul class="principles">
+          <li><span><strong>A piros a cselekvésé.</strong> Csak gombon, aktív menüponton és fókuszjelzőn szerepel — így a látogató szeme mindig a következő lépésre esik: hívás, ajánlatkérés.</span></li>
+          <li><span><strong>A színt a telep adja.</strong> A felületek fehérek és világos betonszürkék; színes csak a valódi fotó a raktárról, a fűrészáruról, a térkőről.</span></li>
+          <li><span><strong>Egy betűcsalád.</strong> Az Archivo címnek és szövegnek is — árnyék, térhatás és képként beillesztett felirat nélkül.</span></li>
+          <li><span><strong>Mérhetően olvasható.</strong> Minden szöveg–háttér pár megfelel a WCAG 2.2 AA kontrasztkövetelményének.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="swatches" data-r>
+      <div class="swatch" style="background:#161615;color:#f2f1ee;box-shadow:inset 0 0 0 1px #37362f"><b>Grafit</b><span class="lbl">#161615 · szöveg, sötét sávok</span></div>
+      <div class="swatch" style="background:#d62329;color:#fff"><b>M&amp;M-piros</b><span class="lbl">#d62329 · csak cselekvés</span></div>
+      <div class="swatch" style="background:#f5f3ef;color:#151515"><b>Világos beton</b><span class="lbl">#f5f3ef · váltakozó háttér</span></div>
+      <div class="swatch" style="background:#ffffff;color:#151515"><b>Fehér</b><span class="lbl">#ffffff · alap</span></div>
+    </div>
+    <div class="type">
+      <div class="tcard" data-r><span class="lbl">Egyetlen betűcsalád · Archivo</span><div class="aa" style="font-weight:720">Aa</div>
+        <div class="weights" aria-hidden="true"><span style="font-weight:400">Vakolat</span><span style="font-weight:600">Festék</span><span style="font-weight:760">Tégla</span></div>
+        <p>Változtatható vastagságú groteszk: a címek és a szövegek ugyanabból a fájlból jönnek. Ékezetekkel együtt, telefonon is jól olvasható.</p></div>
+      <div class="tcard" data-r style="--d:80ms"><span class="lbl">Ikonok · munkák szerint</span>
+        <div class="icons" aria-hidden="true"><span><svg><use href="#i-haz"/></svg></span><span><svg><use href="#i-henger"/></svg></span><span><svg><use href="#i-retegek"/></svg></span><span><svg><use href="#i-fal"/></svg></span></div>
+        <p>Vékony vonalas jelek a „Mit épít?” választóhoz: új ház, festés, szigetelés, homlokzat — díszítés helyett tájékozódásra.</p></div>
+    </div>
+    <p class="note">Az Archivo SIL Open Font License alatt szabadon használható — nincs licencdíj. A weboldal a betűt saját tárhelyről tölti, nem a Google-től.</p>
+  </div>
+</section>
+
+<!-- 3 · AZ ÚJ WEBOLDAL -->
+<section class="sec light white" aria-labelledby="s3">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>03</b>Az új weboldal</p>
+    <h2 id="s3" data-r>Elkészült, <span class="hl">működés közben.</span></h2>
+    <p class="lead" data-r>Nem látványterv, hanem működő, 67 oldalas weboldal a régi oldal tartalmával, a gyártói adatlapokkal, a Facebook-hírekkel és a telep saját fotóival. Az alábbi keretekben maga az élő oldal fut.</p>
+    <div class="web-duo">
+      <figure data-r>
+        <div class="mac"><div class="lid"><div class="scr"><div class="live-frame" data-w="1440" data-start="1500">
+          <iframe title="Az új Paletta Vakolatcentrum-weboldal élőben, asztali nézet" data-src="bemutato/" tabindex="-1"></iframe>
+        </div></div></div><div class="base"></div></div>
+        <figcaption>Élőben, asztali nézet — magától görget; görgessen bele vagy kattintson, és átveszi az irányítást.</figcaption>
+      </figure>
+      <figure data-r style="--d:120ms">
+        <div class="iph"><span class="hw a"></span><span class="hw v1"></span><span class="hw v2"></span><span class="hw p"></span><div class="body"><div class="scr"><span class="island"></span><div class="sb"><span>9:41</span><span class="ic"><i class="sig"></i><i class="bat"></i></span></div><div class="view"><div class="live-frame" data-w="390" data-start="2200">
+          <iframe title="Az új Paletta Vakolatcentrum-weboldal élőben, telefonos nézet" data-src="bemutato/" tabindex="-1"></iframe>
+        </div></div></div></div></div>
+        <figcaption>Ugyanaz telefonon — a hívógomb végig a fejlécben.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · FUNKCIÓK -->
+<section class="sec light" aria-labelledby="s4">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>04</b>Mit tud az új oldal</p>
+    <h2 id="s4" data-r>Nem kell tudni a termék nevét.<br><span class="hl">Elég tudni, mit épít.</span></h2>
+    <p class="lead" data-r>Egy felújító ritkán keres „C2TE flexibilis ragasztót” — fürdőszobát csinál. Az új oldal a munkából indul, és onnan vezet a kategóriáig, a termékig és a boltig.</p>
+    <div class="feats">
+      <article class="feat" data-r><div class="img"><img src="assets/uj-valaszto.webp" alt="„Mit épít vagy újít fel?” választó hat munkával és a hozzájuk tartozó kategóriákkal" loading="lazy"></div><div class="txt"><span class="lbl num">01 · Kezdőlap</span><h3 style="margin-top:.5rem">„Mit épít?” választó</h3><p>Új ház, festés, szigetelés, homlokzat, fürdőszoba, térburkolás és kerítés — egy kattintás, és ott a munka összes anyagcsoportja, mellette az ajánlatkérés és a hívás gombja.</p></div></article>
+      <article class="feat" data-r style="--d:100ms"><div class="img"><img src="assets/uj-termek.webp" alt="Termékoldal: termékfotó, kiszerelés, anyagszükséglet és ajánlatkérő gomb" loading="lazy"></div><div class="txt"><span class="lbl num">02 · Kínálat</span><h3 style="margin-top:.5rem">Termékoldalak a gyártói adatokkal</h3><p>18 kategória négy főcsoportban, 37 termékoldal, 326 műszaki adatsor — „Mire használható”, „Fő tulajdonságok”, „Műszaki adatok” szerint rendezve. Ékezet nélkül is kereshető, és az ajánlatkérő magától kitölti a termék nevét.</p></div></article>
+      <article class="feat" data-r><div class="img mid"><img src="assets/uj-szinkeveres.webp" alt="Színkeverés-szekció sötét háttéren, színmintasorokkal" loading="lazy"></div><div class="txt"><span class="lbl num">03 · Szolgáltatás</span><h3 style="margin-top:.5rem">A színkeverés végre látszik</h3><p>A régi oldalon egy kép-felirat volt; most saját szekció és saját oldal a bolt szó szerinti ígéretével: nemesvakolatok és falfestékek színkeverése a helyszínen, akár azonnal.</p></div></article>
+      <article class="feat" data-r style="--d:100ms"><div class="img"><img src="assets/uj-kapcsolat.webp" alt="Kapcsolat-oldal élő nyitvatartás-jelzővel és hívható telefonszámokkal" loading="lazy"></div><div class="txt"><span class="lbl num">04 · Kapcsolat</span><h3 style="margin-top:.5rem">Nyitva van most?</h3><p>Minden oldal tetején: „Most nyitva” vagy „Most zárva · holnap 07:30-kor nyit”, magyar idő szerint. Ünnepi zárva tartás egy helyen beírva, mindenhol megjelenik. Három szám, mind hívható.</p></div></article>
+      <article class="feat" data-r><div class="img"><img src="assets/uj-aktualis.webp" alt="Aktuális oldal a Facebook-bejegyzések szó szerinti kivonatával" loading="lazy"></div><div class="txt"><span class="lbl num">05 · Aktuális</span><h3 style="margin-top:.5rem">A Facebook-hírek a weboldalon is</h3><p>Érkező áru, készletről elérhető termék: a Facebook-bejegyzések szó szerinti kivonata, dátummal, a kategóriájára mutató linkkel — annak is, aki nem használ Facebookot.</p></div></article>
+      <article class="feat" data-r style="--d:100ms"><div class="img split"><img src="assets/uj-390.webp" alt="Az új oldal telefonon: nyitókép" loading="lazy"><img src="assets/uj-390-termek.webp" alt="Az új oldal telefonon: kínálat" loading="lazy"></div><div class="txt"><span class="lbl num">06 · Telefonon</span><h3 style="margin-top:.5rem">Kesztyűs kézzel is</h3><p>Sokan a telepen vagy az építkezésen nyitják meg. Nagy, legalább 44 px-es érintési célok, a hívógomb mindig a fejlécben, a kezdőlapon minden adat pontosan egyszer szerepel.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- 5 · SZÁMOKBAN -->
+<section class="sec dark" aria-labelledby="s5">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>05</b>Mérhetően</p>
+    <h2 id="s5" data-r>Ma és holnap,<br><span class="hl">tételesen.</span></h2>
+    <table class="cmp" data-r>
+      <thead><tr><th scope="col">Szempont</th><th scope="col">Mostani vakolat-centrum.hu</th><th scope="col">Új weboldal</th></tr></thead>
+      <tbody>
+        <tr><td>Telefonon</td><td class="old">Nincs mobilnézet: a kicsinyített asztali lap, nagyítani kell</td><td class="new">Telefonra tervezve, hívógomb a fejlécben, 360–1920 px között 8 méretben tesztelve</td></tr>
+        <tr><td>Telefonszám, e-mail</td><td class="old">Képként beillesztve; a Facebookon és a Google-ön szereplő 70/941-8692 hiányzik</td><td class="new">Szövegként, egy koppintással hívható — mindhárom szám</td></tr>
+        <tr><td>Termékek</td><td class="old">37 termék; az adatlapok külön gyártói fájlokban, 34 megszűnt márkanéven</td><td class="new">37 termékoldal, 326 műszaki adatsor, kereső és szűrő; a mai kínálatra frissíthető</td></tr>
+        <tr><td>Oldalcím a Google-ben</td><td class="old">A galérián: „Galéria generated by VisualLightBox.com”</td><td class="new">Egyedi cím és leírás mind a 67 oldalon</td></tr>
+        <tr><td>Megosztási kép (Facebook, Messenger)</td><td class="old">Nincs, egyik oldalon sem</td><td class="new">Minden oldalon, a telep saját fotójával</td></tr>
+        <tr><td>Cégadatok a keresőknek</td><td class="old">Nincs</td><td class="new">Cím, telefonok, nyitvatartás, koordináta és a termékek gépileg olvashatóan</td></tr>
+        <tr><td>Nyitvatartás</td><td class="old">Táblázat a kapcsolat-oldalon</td><td class="new">„Most nyitva / zárva” jelző minden oldalon, rendkívüli zárva tartással</td></tr>
+        <tr><td>Technika</td><td class="old">HTML 4.01 (1999), Internet Explorer 8-emuláció, képként beillesztett feliratok</td><td class="new">Statikus HTML5 egy adatforrásból: nincs adatbázis, bejelentkezés és frissítésre váró bővítmény</td></tr>
+        <tr><td>Biztonságos kapcsolat</td><td class="old">http-n is betölt, nincs átirányítás https-re</td><td class="new">Élesítéskor kötelező https-átirányítás és biztonsági fejlécek</td></tr>
+        <tr><td>Régi címek</td><td class="old">—</td><td class="new">A régi aloldalak (termek.html, kapcsolat.html…) átirányítva — a meglévő Google-helyezés nem vész el</td></tr>
+        <tr><td>Akadálymentesség</td><td class="old">—</td><td class="new">WCAG 2.2 AA-ra tervezve: billentyűzettel bejárható, látható fókusz, kikapcsolt animációk tiszteletben tartva</td></tr>
+      </tbody>
+    </table>
+    <p class="note">A „mostani” oszlop adatai a vakolat-centrum.hu 2026. október 9-i méréséből származnak (kezdőlap + 6 aloldal).</p>
+  </div>
+</section>
+
+<!-- 6 · MIT NYER -->
+<section class="sec light white" aria-labelledby="s6">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>06</b>Mit nyer vele a bolt</p>
+    <h2 id="s6" data-r>Nem szebb kirakat.<br><span class="hl">Több hívás, kevesebb kérdés.</span></h2>
+    <div class="gains">
+      <div class="gain" data-r><span class="n">01</span><h3>Aki keres, az hív</h3><p>A telefonszám nem kép, hanem gomb. Aki a Google-ből érkezik, egy koppintással a pultnál van.</p></div>
+      <div class="gain" data-r style="--d:80ms"><span class="n">02</span><h3>Megtalálják</h3><p>„Térkő Tiszafüred”, „csemperagasztó Tiszafüred”: 67 saját című oldal, termékenként külön — mind egy-egy bejárat a boltba.</p></div>
+      <div class="gain" data-r style="--d:160ms"><span class="n">03</span><h3>Tájékozott vevő</h3><p>Aki betér, már látta, mi kell a fürdőszobához vagy a homlokzathoz — a pultnál a mennyiségről és a színről esik szó.</p></div>
+      <div class="gain" data-r><span class="n">04</span><h3>A Facebook-munka kétszer hasznosul</h3><p>Ami a Facebookra felkerül, az a weboldalon is megjelenik — azoknál is, akik nem használnak Facebookot.</p></div>
+      <div class="gain" data-r style="--d:80ms"><span class="n">05</span><h3>Biztonság, karbantartás nélkül</h3><p>Az új, statikus oldalon nincs bejelentkezés, nincs bővítmény, nincs adatbázis — nincs mit feltörni és nincs mit frissíteni.</p></div>
+      <div class="gain" data-r style="--d:160ms"><span class="n">06</span><h3>Nem kell vele foglalkozni</h3><p>Új áru, akció, ünnepi nyitvatartás: egy üzenet, és felkerül — a bolt munkatársainak nem kell a weboldalt kezelniük.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · MENETREND -->
+<section class="sec dark" aria-labelledby="s7">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>07</b>Menetrend</p>
+    <h2 id="s7" data-r>Két hét<br><span class="hl">az élesítésig.</span></h2>
+    <p class="lead" data-r>Az oldal kész; a hátralévő munka néhány adat egyeztetése és az élesítés. Az oldalon csak a régi weboldalról és a bolt Facebook-oldaláról igazolható adat szerepel — amit csak Önök tudnak, azt megkérdezem.</p>
+    <ol class="steps">
+      <li data-r><span class="lbl w">1. hét</span><h3>Egyeztetés</h3><p>Bemutató és egy rövid, 15–20 perces kérdőív, például:</p>
+        <ul><li>mit árulnak ma a KingStone- (ma METON-) termékekből</li><li>melyik legyen a fő telefonszám</li><li>mi kerüljön a nyílászáró, gipszkarton és szigetelés kategóriába</li><li>adatvédelmi tájékoztató a cég részéről</li></ul></li>
+      <li data-r style="--d:80ms"><span class="lbl w">2. hét</span><h3>Élesítés</h3><p>A vakolat-centrum.hu átállítása az új oldalra a mostani tárhelyen, https, a régi aloldalak átirányítása, végső ellenőrzés telefonon és gépen.</p></li>
+      <li data-r style="--d:160ms"><span class="lbl w">Utána</span><h3>Folyamatos gondozás</h3><p>Új áru, akció, nyitvatartás, Facebook-hír — havonta én vezetem át, a boltnak nem kell a weboldallal foglalkoznia.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 8 · ÁRAJÁNLAT -->
+<section class="sec light" aria-labelledby="s8">
+  <div class="wrap">
+    <p class="lbl kick" data-r><span class="dot"></span><b>08</b>Árajánlat</p>
+    <h2 id="s8" data-r>Tételesen,<br><span class="hl">rejtett költség nélkül.</span></h2>
+    <div class="quote" data-r>
+      <header><b>M&amp;M Tiszafüred Kft. · Paletta Vakolatcentrum weboldal</b><span>Ajánlat dátuma: 2026. október · érvényes 30 napig · óradíj: 5 000 Ft + ÁFA</span></header>
+      <table class="qt">
+        <thead><tr><th scope="col">Tétel</th><th scope="col" class="r hrs">Óra</th><th scope="col" class="r">Nettó ár</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="3">Arculat</td></tr>
+          <tr><td>Szín- és betűrendszer az M&M megjelenéséhez<small>A fekete háromszög-logóhoz és az M&M-pirosához igazított paletta, egyetlen betűcsalád (Archivo), saját vonalas ikonok, kontrasztmérés</small></td><td class="r hrs">3</td><td class="r">15 000 Ft</td></tr>
+          <tr class="sub"><td>Arculat összesen</td><td class="r hrs">3</td><td class="r">15 000 Ft</td></tr>
+          <tr class="grp"><td colspan="3">Weboldal</td></tr>
+          <tr><td>Tartalom-audit és -átvétel<small>A régi oldal 7 oldala, 34 gyártói adatlap → 326 műszaki adatsor, 6 pályázati dokumentum, 35 fotó, a Facebook-oldal 2026-os bejegyzései; forrásnapló minden állításhoz</small></td><td class="r hrs">12</td><td class="r">60 000 Ft</td></tr>
+          <tr><td>UX/UI tervezés<small>Asztali és mobil nézet, „Mit épít?” választó, négy főcsoportos kínálat, termékoldal-sablon, komponensek az arculatra</small></td><td class="r hrs">12</td><td class="r">60 000 Ft</td></tr>
+          <tr><td>Fejlesztés<small>Oldalgenerátor egy adatforrásból (67 oldal), ékezetfüggetlen termékkereső és szűrő, élő nyitvatartás-jelző, ajánlatkérő, galéria, Aktuális oldal, mozgásrendszer</small></td><td class="r hrs">26</td><td class="r">130 000 Ft</td></tr>
+          <tr><td>Termékfotók egységesítése<small>37 termékkép besorolása (csomagolás / anyagminta / prospektus) és optikai méretkiegyenlítése, hogy a rács egyenletes legyen</small></td><td class="r hrs">4</td><td class="r">20 000 Ft</td></tr>
+          <tr><td>Minőségbiztosítás<small>Keresőoptimalizálás, strukturált cégadatok, megosztási képek, akadálymentesség (WCAG 2.2 AA), helyi betűtípusok, 8 képernyőméret tesztje</small></td><td class="r hrs">6</td><td class="r">30 000 Ft</td></tr>
+          <tr><td>Élesítés és átadás<small>Feltöltés a mostani tárhelyre, a régi címek átirányítása, HTTPS és biztonsági beállítások; forráskód átadása</small></td><td class="r hrs">3</td><td class="r">15 000 Ft</td></tr>
+          <tr class="sub"><td>Weboldal összesen</td><td class="r hrs">63</td><td class="r">315 000 Ft</td></tr>
+          <tr class="total"><td>Fizetendő összesen</td><td class="r hrs">66</td><td class="r">330 000 Ft + ÁFA</td></tr>
+        </tbody>
+      </table>
+      <div class="opts">
+        <div class="opt"><b>Üzemeltetés és havi tartalomfrissítés — javasolt<span>25 000 Ft / hó</span></b><p>Új áru, akció, nyitvatartás, Facebook-hír: a változásokat havonta én vezetem át, kb. 1 óra/hó keretben; tárhely-felügyelet és biztonsági mentés. Havonta felmondható.</p></div>
+        <div class="opt"><b>Google Cégprofil és online katalógusok egységesítése<span>20 000 Ft</span></b><p>Ma a nyitva.hu, Firmania, Cylex és társai 16:30-as zárást mutatnak, két helyen „Nyílászáró” a fő kategória, és két Facebook-oldal létezik. A Google-profil és a katalógusok rendbetétele a weboldallal egyező adatokra — 4 óra.</p></div>
+        <div class="opt"><b>Termékkatalógus frissítése a mai kínálatra<span>kb. 15–30 ezer Ft</span></b><p>A KingStone-termékek utódai ma METON / STONE néven, új csomagolással futnak. A bolt listája alapján a termékoldalak, nevek és fotók cseréje — óradíjban, a termékek számától függően.</p></div>
+        <div class="opt"><b>Logó vektoros újrarajzolása<span>25 000 Ft</span></b><p>Az M&M háromszög-logó ma csak 180×150 px-es képként létezik. Vektoros újrarajzolás változatokkal (fekvő, egyszínű, önálló jel) nyomdához, molinóhoz, autóhoz — 5 óra.</p></div>
+      </div>
+      <div class="terms">
+        <span><strong>Fizetés:</strong> 40% a megrendeléskor, 60% az élesítéskor.</span>
+        <span><strong>Átadott állományok:</strong> a weboldal teljes forráskódja és oldalgenerátora — a jogok a teljes díj kifizetésével a megrendelőre szállnak.</span>
+        <span><strong>Nem tartalmazza:</strong> a tárhely és a domain díját (a mostani tárhely maradhat), valamint fotózást és nyomdai költséget.</span>
+        <span>Az árak nettó árak, az ÁFA-t nem tartalmazzák.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · ZÁRÁS -->
+<section class="sec dark close" aria-labelledby="s9">
+  <div class="wrap">
+    <svg class="stack late" data-r viewBox="0 0 120 92" aria-hidden="true">
+      <rect class="pal" x="4" y="80" width="112" height="6" fill="#5f5c57"/><rect class="pal" x="10" y="86" width="10" height="5" fill="#5f5c57"/><rect class="pal" x="55" y="86" width="10" height="5" fill="#5f5c57"/><rect class="pal" x="100" y="86" width="10" height="5" fill="#5f5c57"/>
+      <g fill="#f2f1ee">
+        <rect class="b" x="8" y="64" width="34" height="14" rx="1.5" style="animation-delay:.1s"/><rect class="b" x="43" y="64" width="34" height="14" rx="1.5" style="animation-delay:.18s"/><rect class="b" x="78" y="64" width="34" height="14" rx="1.5" style="animation-delay:.26s"/>
+        <rect class="b" x="8" y="48" width="16.5" height="14" rx="1.5" style="animation-delay:.45s"/><rect class="b" x="25.5" y="48" width="34" height="14" rx="1.5" style="animation-delay:.53s"/><rect class="b" x="60.5" y="48" width="34" height="14" rx="1.5" style="animation-delay:.61s"/><rect class="b" x="95.5" y="48" width="16.5" height="14" rx="1.5" style="animation-delay:.69s"/>
+        <rect class="b" x="8" y="32" width="34" height="14" rx="1.5" style="animation-delay:.85s"/><rect class="b" x="78" y="32" width="34" height="14" rx="1.5" style="animation-delay:1.01s"/>
+      </g>
+      <rect class="b" x="43" y="32" width="34" height="14" rx="1.5" fill="#d62329" style="animation-delay:.93s"/>
+    </svg>
+    <h2 id="s9" data-r>Nézzük meg <span class="hl">együtt.</span></h2>
+    <p class="lead" data-r style="margin-inline:auto">Egy 30 perces bemutatón — Tiszafüreden, személyesen is — végigmegyünk az élő oldalon, és válaszolok minden kérdésre.</p>
+    <div class="btns" data-r>
+      <a class="btn p" href="bemutato/" target="_blank" rel="noopener">Az új weboldal kipróbálása ↗</a>
+      <a class="btn s" href="mailto:vtamasgabor@gmail.com?subject=Paletta%20Vakolatcentrum%20weboldal%20%E2%80%94%20bemutat%C3%B3">Időpont egyeztetése</a>
+    </div>
+    <div class="sign" data-r><b>Varga Tamás Gábor</b>vtamasgabor@gmail.com</div>
+  </div>
+</section>
+</main>
+<footer class="f"><span>© 2026 Varga Tamás Gábor · Az M&amp;M Tiszafüred Kft. részére készült bizalmas ajánlat.</span><span>Az új weboldal a megrendelésig a készítő szellemi tulajdona.</span></footer>
+
+<script>
+document.documentElement.classList.add("js");
+(() => {
+  const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+  document.querySelectorAll("[data-r]").forEach((el) => io.observe(el));
+
+  // élő bemutató: iframe-ek betöltése láthatóvá váláskor, méretezés és automatikus görgetés.
+  // Az ajánlat és a bemutató ugyanazon az originen van (bemutato/ alútvonal), ezért a keretbe bele lehet nyúlni.
+  const frames = [...document.querySelectorAll(".live-frame")];
+  const size = (f) => { const ifr = f.querySelector("iframe"); const w = +f.dataset.w; const sc = f.clientWidth / w;
+    ifr.style.width = w + "px"; ifr.style.height = Math.ceil(f.clientHeight / sc) + "px"; ifr.style.transform = `scale(${sc})`; };
+  frames.forEach(size); addEventListener("resize", () => frames.forEach(size));
+  const drive = (f) => {
+    const ifr = f.querySelector("iframe"); let win; try { win = ifr.contentWindow; win.document.documentElement; } catch { return; }
+    const st = { hold: performance.now() + (+f.dataset.start || 1500), last: 0, dir: 1, y: 0 };
+    f._st = st;
+    ["wheel", "pointerdown", "touchstart", "keydown"].forEach((ev) => win.addEventListener(ev, () => { st.hold = performance.now() + 9000; st.y = win.scrollY; }, { passive: true }));
+    // a keretben kattintott link is a keretben marad; a bemutató oldalai között görgetés újraindul
+    ifr.addEventListener("load", () => { st.y = 0; st.dir = 1; st.hold = performance.now() + 2500; });
+    // kikapcsolt rendszeranimációk mellett is görget: ez bemutató, nem olvasandó szöveg (a Józsa-ajánlat döntése)
+    const speed = +f.dataset.w > 800 ? 85 : 70; // px/s a weboldal saját képpontjaiban
+    const step = (t) => {
+      if (!f.isConnected || f._st !== st) return;
+      const dt = st.last ? Math.min(0.05, (t - st.last) / 1000) : 0; st.last = t;
+      let w2; try { w2 = ifr.contentWindow; } catch { return; }
+      if (f._vis && t > st.hold && w2) {
+        const d = w2.document.documentElement, max = d.scrollHeight - w2.innerHeight;
+        if (st.dir > 0) {
+          st.y = Math.min(max, st.y + speed * dt);
+          w2.scrollTo({ top: st.y, behavior: "instant" });
+          if (st.y >= max - 1) { st.dir = -1; st.hold = t + 2500; }
+        } else {
+          w2.scrollTo({ top: 0, behavior: "smooth" }); st.y = 0; st.dir = 1; st.hold = t + 3000;
+        }
+      }
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  function load(f) {
+    f._loaded = true; const ifr = f.querySelector("iframe");
+    ifr.addEventListener("load", () => { size(f); if (!f._st) drive(f); }, { once: true });
+    ifr.src = ifr.dataset.src;
+  }
+  const io3 = new IntersectionObserver((es) => es.forEach((e) => {
+    const f = e.target; f._vis = e.isIntersecting;
+    if (e.isIntersecting && !f._loaded) load(f);
+  }), { threshold: 0.25 });
+  frames.forEach((f) => io3.observe(f));
+
+  // fejléc + haladásjelző
+  const top = document.querySelector(".top"), bar = document.querySelector(".bar");
+  const onScroll = () => { const h = document.documentElement; bar.style.setProperty("--p", (h.scrollTop / (h.scrollHeight - h.clientHeight)).toFixed(4)); top.classList.toggle("on", h.scrollTop > innerHeight * 0.8); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+})();
+</script>
+</body>
+</html>
